@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CruiseDemo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,14 @@ namespace CruiseDemo.Controllers
         // GET: About
         public ActionResult Index()
         {
-            return View();
+            AboutViewModel model = new AboutViewModel
+            {
+                AboutItems = db.AboutItems.ToList(),
+                Employees = db.Employees.ToList(),
+                Testimonials = db.Testimonials.OrderBy(t => t.Ordering).ToList(),
+                Vacancies = db.Vacancies.ToList()
+            };
+            return View(model);
         }
     }
 }

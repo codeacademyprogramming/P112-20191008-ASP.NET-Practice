@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CruiseDemo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,13 @@ namespace CruiseDemo.Controllers
         // GET: Careers
         public ActionResult Index()
         {
-            return View();
+            CareersViewModel model = new CareersViewModel
+            {
+                Advantages = db.Advantages.Where(a => a.Page == "careers").ToList(),
+                Vacancies = db.Vacancies.ToList()
+            };
+
+            return View(model);
         }
     }
 }

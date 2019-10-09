@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CeyhunFreelancerProjectModelStoreContainer" CdmEntityContainer="CeyhunFreelancerProjectEntities">
+    <EntitySetMapping Name="Abouts">
+      <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="DownloadLink" ColumnName="DownloadLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portfolios">
+      <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LinkTitle" ColumnName="LinkTitle" />
+          <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+          <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+          <ScalarProperty Name="LinkedinLink" ColumnName="LinkedinLink" />
+          <ScalarProperty Name="FreelancerAbout" ColumnName="FreelancerAbout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Starts">
+      <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Start">
+        <MappingFragment StoreEntitySet="Start">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -141,12 +141,15 @@
     <Compile Include="Models\AboutItem.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AboutViewModel.cs" />
     <Compile Include="Models\Advantage.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Blog.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BlogViewModel.cs" />
+    <Compile Include="Models\CareersViewModel.cs" />
     <Compile Include="Models\Database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +175,7 @@
     <Compile Include="Models\Setting.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TechnologyViewModel.cs" />
     <Compile Include="Models\Testimonial.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>

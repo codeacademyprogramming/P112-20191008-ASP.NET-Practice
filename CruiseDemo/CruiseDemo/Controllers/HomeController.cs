@@ -15,7 +15,7 @@ namespace CruiseDemo.Controllers
             HomeViewModel model = new HomeViewModel
             {
                 Advantages = db.Advantages.Where(a=> a.Page == "home").ToList(),
-                Blogs = db.Blogs.OrderBy(b => b.CreatedAt).Take(4).ToList(),
+                Blogs = db.Blogs.OrderByDescending(b => b.CreatedAt).Take(4).ToList(),
                 Features = db.Features.ToList(),
                 Testimonials = db.Testimonials.OrderBy(t => t.Ordering).ToList()
             };

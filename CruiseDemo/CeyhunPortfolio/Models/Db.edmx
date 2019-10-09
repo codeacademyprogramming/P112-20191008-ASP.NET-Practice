@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CeyhunFreelancerProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nchar" MaxLength="150" />
+          <Property Name="Description1" Type="nchar" MaxLength="250" />
+          <Property Name="Description2" Type="nchar" MaxLength="250" />
+          <Property Name="DownloadLink" Type="nchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nchar" MaxLength="150" />
+          <Property Name="Photo" Type="nchar" MaxLength="150" />
+          <Property Name="Description" Type="nchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="nchar" MaxLength="150" />
+          <Property Name="LinkTitle" Type="nchar" MaxLength="150" />
+          <Property Name="FacebookLink" Type="nchar" MaxLength="150" />
+          <Property Name="TwitterLink" Type="nchar" MaxLength="150" />
+          <Property Name="LinkedinLink" Type="nchar" MaxLength="150" />
+          <Property Name="FreelancerAbout" Type="nchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Start">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nchar" MaxLength="150" />
+          <Property Name="Title" Type="nchar" MaxLength="150" />
+          <Property Name="Position" Type="nchar" MaxLength="150" />
+        </EntityType>
+        <EntityContainer Name="CeyhunFreelancerProjectModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Start" EntityType="Self.Start" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CeyhunFreelancerProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="Description1" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="Description2" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="DownloadLink" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Portfolio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="LinkTitle" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="FacebookLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="TwitterLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="LinkedinLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="FreelancerAbout" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Start">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CeyhunFreelancerProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abouts" EntityType="Self.About" />
+          <EntitySet Name="Portfolios" EntityType="Self.Portfolio" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+          <EntitySet Name="Starts" EntityType="Self.Start" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CeyhunFreelancerProjectModelStoreContainer" CdmEntityContainer="CeyhunFreelancerProjectEntities">
+          <EntitySetMapping Name="Abouts">
+            <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description1" ColumnName="Description1" />
+                <ScalarProperty Name="Description2" ColumnName="Description2" />
+                <ScalarProperty Name="DownloadLink" ColumnName="DownloadLink" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Portfolios">
+            <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Portfolio">
+              <MappingFragment StoreEntitySet="Portfolio">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LinkTitle" ColumnName="LinkTitle" />
+                <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+                <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+                <ScalarProperty Name="LinkedinLink" ColumnName="LinkedinLink" />
+                <ScalarProperty Name="FreelancerAbout" ColumnName="FreelancerAbout" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Starts">
+            <EntityTypeMapping TypeName="CeyhunFreelancerProjectModel.Start">
+              <MappingFragment StoreEntitySet="Start">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CeyhunFreelancerProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Description1" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="DownloadLink" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="LinkTitle" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="FacebookLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="TwitterLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="LinkedinLink" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="FreelancerAbout" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Start">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Photo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CeyhunFreelancerProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abouts" EntityType="Self.About" />
+    <EntitySet Name="Portfolios" EntityType="Self.Portfolio" />
+    <EntitySet Name="Settings" EntityType="Self.Setting" />
+    <EntitySet Name="Starts" EntityType="Self.Start" />
+  </EntityContainer>
+</Schema>

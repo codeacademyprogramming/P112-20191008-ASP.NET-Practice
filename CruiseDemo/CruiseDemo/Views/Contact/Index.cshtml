@@ -1,8 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Contact";
 }
+@{ 
+    CruiseDemo.Models.Setting setting = ViewBag.Settings;
 
+}
 <div class="ftco-blocks-cover-1">
     <div class="ftco-cover-1 overlay" style="background-image: url('Public/images/hero_1.jpg')">
         <div class="container">
@@ -55,10 +58,10 @@
                     <ul class="list-unstyled footer-link">
                         <li class="d-block mb-3">
                             <span class="d-block text-black">Address:</span>
-                            <span>34 Street Name, City Name Here, United States</span>
+                            <span>@setting.Address</span>
                         </li>
-                        <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+1 242 4942 290</span></li>
-                        <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@yourdomain.com</span></li>
+                        <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>@setting.Phone</span></li>
+                        <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>@setting.Email</span></li>
                     </ul>
                 </div>
             </div>
