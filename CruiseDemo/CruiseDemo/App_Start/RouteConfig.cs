@@ -16,12 +16,14 @@ namespace CruiseDemo
             routes.MapRoute(
                 name: "Blog",
                 url: "Blog/p/{page}",
-                defaults: new { controller = "Blog", action = "Index", page = UrlParameter.Optional }
-            );
+                defaults: new { controller = "Blog", action = "Index", page = UrlParameter.Optional },
+                namespaces: new string[] { "CruiseDemo.Controllers" }
+                );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new string[] { "CruiseDemo.Controllers" }
             );
         }
     }

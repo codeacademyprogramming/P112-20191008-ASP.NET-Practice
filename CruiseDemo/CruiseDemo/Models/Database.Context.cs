@@ -33,5 +33,6 @@ namespace CruiseDemo.Models
         public virtual DbSet<Setting> Settings { get; set; }
         public virtual DbSet<Testimonial> Testimonials { get; set; }
         public virtual DbSet<Vacancy> Vacancies { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
     }
 }

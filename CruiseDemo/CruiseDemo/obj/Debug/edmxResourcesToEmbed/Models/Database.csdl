@@ -90,5 +90,15 @@
     <EntitySet Name="Settings" EntityType="Self.Setting" />
     <EntitySet Name="Testimonials" EntityType="Self.Testimonial" />
     <EntitySet Name="Vacancies" EntityType="Self.Vacancy" />
+    <EntitySet Name="Admins" EntityType="P112CruiseModel.Admin" />
   </EntityContainer>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fullname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
